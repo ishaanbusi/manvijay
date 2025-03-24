@@ -1,20 +1,20 @@
 "use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-900">
-              ModernBiz
+              Manvijay
             </Link>
           </div>
 
@@ -35,8 +35,8 @@ const Navigation = () => {
                 href={item.href}
                 className={`${
                   pathname === item.href
-                    ? 'text-blue-600 font-semibold'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? "text-blue-600 font-semibold"
+                    : "text-gray-600 hover:text-gray-900"
                 } transition-colors duration-200`}
               >
                 {item.label}
@@ -65,8 +65,8 @@ const Navigation = () => {
                   href={item.href}
                   className={`${
                     pathname === item.href
-                      ? 'bg-blue-50 text-blue-600'
-                      : 'text-gray-600 hover:bg-gray-50'
+                      ? "bg-blue-50 text-blue-600"
+                      : "text-gray-600 hover:bg-gray-50"
                   } block px-3 py-2 rounded-md text-base font-medium`}
                   onClick={() => setIsOpen(false)}
                 >
